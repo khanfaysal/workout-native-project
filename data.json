@@ -1,0 +1,67 @@
+[
+    {
+        "slug": "abs-workout-simple-32321223",
+        "name": "Abs workout simple",
+        "duration": 145,
+        "difficulty": "easy",
+        "sequence": [
+            {
+                "slug": "pushups-1",
+                "name": "pushups",
+                "type": "exercise",
+                "reps": 15,
+                "duration": 60
+            },
+            {
+                "slug": "pullup-2",
+                "name": "pullup",
+                "type": "exercise",
+                "reps": 10,
+                "duration": 60
+            }
+        ]
+    },
+    {
+        "slug": "easy-arm-workout-32321222",
+        "name": "Easy arm workout",
+        "duration": 245,
+        "difficulty": "medium",
+        "sequence": [
+            {
+                "slug": "pushups-23",
+                "name": "pushups",
+                "type": "exercise",
+                "reps": 15,
+                "duration": 60
+            },
+            {
+                "slug": "pullup-25",
+                "name": "pullup",
+                "type": "break",
+                "reps": 8,
+                "duration": 40
+            }
+        ]
+    },
+    {
+        "slug": "cardio-workout-32324444",
+        "name": "Cardio workout",
+        "duration": 345,
+        "difficulty": "hard",
+        "sequence": [
+            {
+                "slug": "breath-1",
+                "name": "breath",
+                "type": "break",
+                "duration": 10
+            },
+            {
+                "slug": "jumping-2",
+                "name": "jump",
+                "type": "exercise",
+                "reps": 100,
+                "duration": 120
+            }
+        ]
+    }
+]
