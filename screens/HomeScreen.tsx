@@ -1,34 +1,41 @@
 import React from 'react'
 import { NativeStackHeaderProps } from '@react-navigation/native-stack';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Pressable, Alert } from 'react-native';
 import data from '../data.json';
+import { Workout } from '../types/data';
+import WorkoutItem from '../components/WorkoutItem';
 
 const HomeScreen = ({ navigation }: NativeStackHeaderProps) => {
-    const renderItem = ({ item }: { item: any }) => (
-        <View>
-            <Text>{item.name}</Text>
-            <Text>{item.difficulty}</Text>
-        </View>
-    )
 
     return (
         <View style={styles.container}>
+            <Text style={styles.header}>New Workouts</Text>
             <FlatList
-                data={data}
-                renderItem={renderItem}
+                data={data as Workout[]}
+                renderItem={({ item }) => {
+                    return (
+                        <Pressable
+                            onPress={() => navigation.navigate('WorkDetail', { slug: item.slug })}
+                        >
+                            <WorkoutItem item={item} />
+                        </Pressable>
+                    )
+                }}
                 keyExtractor={item => item.slug}
             />
-            {/* <Button
-                title='Go Plan'
-                onPress={() => navigation.navigate('Planner')}
-            /> */}
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        padding: 20
+        padding: 20,
+        flex: 1
+    },
+    header: {
+        fontSize: 20,
+        marginBottom: 20,
+        fontFamily: "montserrat-bold"
     }
 })
 
